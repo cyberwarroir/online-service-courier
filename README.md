@@ -9,3 +9,6 @@ delivery details
 ![Screenshot 2025-06-07 230212](https://github.com/user-attachments/assets/47911339-8ef7-40c7-9085-1dda42974672)
 payment method
 ![Screenshot 2025-06-07 230456](https://github.com/user-attachments/assets/ca1ab625-0341-48b1-b4c6-5e4a9ed1f871)
+
+detail method
+![Screenshot 2025-06-07 230616](https://github.com/user-attachments/assets/b2dff88d-224b-4170-8d10-35a4f29b3fab)
