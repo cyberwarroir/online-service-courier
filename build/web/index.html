@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jin-Sung Service | Modern Online Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #fd7e14;
+            --light-color: #f8f9fa;
+            --dark-color: #0000FF;
+            
+         
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("image/one.jpeg");
+             
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            padding: 8rem ;
+            padding-left: 23rem;
+            margin: 3rem 3rem 3rem 3rem;
+                  
+            border-radius: 10px
+        }
+        
+        .category-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            background: white;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+        
+        .rating {
+            color: #ffc107;
+        }
+        
+        .delivery-badge {
+            background-color: #198754;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .deals-countdown {
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50rem;
+            padding: 0.25rem 1rem;
+            font-weight: 600;
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: #ddd;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        nav{
+            background-color:#1721DC;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+ <head/>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <i class="bi bi-shop"></i> Jin-Sung Service
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#electronics">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#food">Food & Groceries</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#home">Home & Garden</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <div class="d-flex">
+                    <div class="input-group me-3">
+                        <input type="text" class="form-control" placeholder="Search products...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <a href="cart.html" class="btn btn-outline-light position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Summer Sale is Live!</h1>
+            <p class="lead mb-5">Up to 50% off on electronics, fashion, and more</p>
+            <a href="#deals" class="btn btn-primary btn-lg px-4 me-2">Shop Deals</a>
+            <a href="#featured" class="btn btn-outline-light btn-lg px-4">New Arrivals</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <!-- Categories Section -->
+        <section class="mb-5">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <a href="#electronics" class="text-decoration-none">
+                        <div class="card category-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="Electronics">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Electronics</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#food" class="text-decoration-none">
+                        <div class="card category-card">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="Food">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Food & Groceries</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#fashion" class="text-decoration-none">
+                        <div class="card category-card">
+                            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="Fashion">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Fashion</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#home" class="text-decoration-none">
+                        <div class="card category-card">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="Home">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Home & Garden</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="featured" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="#" class="btn btn-outline-primary">View All</a>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">-50% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Smart Watch">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Watch Pro</h5>
+                            <p class="card-text text-muted">Fitness tracking and notifications with long battery life</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="h5 text-primary">5,000f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">10,000f</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">(128)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="image/two.jpeg "
+                             class="card-img-top" alt="Wireless Headphones" height="345">
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <p class="card-text text-muted">Noise cancelling with 30hr battery life</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="h5 text-primary">1299f</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">(87)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-success text-white">
+                            <i class="bi bi-organic"></i> Organic
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60vh&h=730" 
+                             class="card-img-top" alt="Organic Fruits">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Fruits Basket</h5>
+                            <p class="card-text text-muted">Seasonal selection of premium organic fruits</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="h5 text-primary">2004.99f</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">(45)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-clock"></i> Fast Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="image/camera.jpeg" 
+                             class="card-img-top" alt="Camera">
+                        <div class="card-body">
+                            <h5 class="card-title">DSLR Camera</h5>
+                            <p class="card-text text-muted">24.2MP with 4K video and WiFi connectivity</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="h5 text-primary">5999.9f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">6999.9f</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">(63)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals of the Day -->
+        <section id="deals" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Deals of the Day</h2>
+                <div class="deals-countdown">
+                    <i class="bi bi-clock"></i> Ends in: 
+                    <span id="countdown">23:59:59</span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">HOT DEAL</span>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Headphones">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Headphones</h5>
+                            <div class="progress mb-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" 
+                                     style="width: 75%;" 
+                                     role="progressbar"></div>
+                            </div>
+                            <small class="text-muted">27 left in stock</small>
+                            <div class="d-flex justify-content-between align-items-center my-2">
+                                <div>
+                                    <span class="h5 text-primary">9000f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">12000f</span>
+                                </div>
+                                <span class="text-danger fw-bold">Save 30%</span>
+                            </div>
+                            <button class="btn btn-danger w-100">
+                                <i class="bi bi-lightning"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">-25% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1600003263720-95b45a4035d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Coffee Maker">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffee Maker</h5>
+                            <div class="progress mb-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" 
+                                     style="width: 40%;" 
+                                     role="progressbar"></div>
+                            </div>
+                            <small class="text-muted">15 left in stock</small>
+                            <div class="d-flex justify-content-between align-items-center my-2">
+                                <div>
+                                    <span class="h5 text-primary">4000f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">6000f</span>
+                                </div>
+                                <span class="text-danger fw-bold">Save 25%</span>
+                            </div>
+                            <button class="btn btn-danger w-100">
+                                <i class="bi bi-lightning"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">FLASH SALE</span>
+                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Camera">
+                        <div class="card-body">
+                            <h5 class="card-title">Instant Camera</h5>
+                            <div class="progress mb-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" 
+                                     style="width: 20%;" 
+                                     role="progressbar"></div>
+                            </div>
+                            <small class="text-muted">8 left in stock</small>
+                            <div class="d-flex justify-content-between align-items-center my-2">
+                                <div>
+                                    <span class="h5 text-primary">7000f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">9000f</span>
+                                </div>
+                                <span class="text-danger fw-bold">Save 20%</span>
+                            </div>
+                            <button class="btn btn-danger w-100">
+                                <i class="bi bi-lightning"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">-35% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Speaker">
+                        <div class="card-body">
+                            <h5 class="card-title">Bluetooth Speaker</h5>
+                            <div class="progress mb-2" style="height: 5px;">
+                                <div class="progress-bar bg-warning" 
+                                     style="width: 60%;" 
+                                     role="progressbar"></div>
+                            </div>
+                            <small class="text-muted">22 left in stock</small>
+                            <div class="d-flex justify-content-between align-items-center my-2">
+                                <div>
+                                    <span class="h5 text-primary">6499f</span>
+                                    <span class="text-decoration-line-through text-muted ms-2">9550f</span>
+                                </div>
+                                <span class="text-danger fw-bold">Save 35%</span>
+                            </div>
+                            <button class="btn btn-danger w-100">
+                                <i class="bi bi-lightning"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electronics Section -->
+        <section id="electronics" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Electronics</h2>
+                <a href="#" class="btn btn-outline-primary">View All</a>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">Ultrabook Laptop</h5>
+                            <p class="card-text text-muted">13-inch, 16GB RAM, 512GB SSD</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">1,100,00f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-danger text-white">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Headphones">
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Earbuds</h5>
+                            <p class="card-text text-muted">True wireless with charging case</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">8000f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1468436139062-f60a71c5c892?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Tablet">
+                        <div class="card-body">
+                            <h5 class="card-title">10" Tablet</h5>
+                            <p class="card-text text-muted">128GB storage, 8-core processor</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">120,000f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Keyboard">
+                        <div class="card-body">
+                            <h5 class="card-title">Mechanical Keyboard</h5>
+                            <p class="card-text text-muted">RGB backlit with brown switches</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">7900f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-truck"></i> Free Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Section -->
+        <section id="food" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Food & Groceries</h2>
+                <a href="#" class="btn btn-outline-primary">View All</a>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-success text-white">
+                            <i class="bi bi-organic"></i> Organic
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Fruits">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Fruits Box</h5>
+                            <p class="card-text text-muted">Seasonal selection of premium organic fruits</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">2400f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-clock"></i> Fast Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-success text-white">
+                            <i class="bi bi-organic"></i> Organic
+                        </span>
+                        <img src="image/avoca.jpeg"
+                             class="card-img-top" alt="Coffee">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium </h5>
+                            <p class="card-text text-muted">meat , pear and vegetables</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">1500f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-clock"></i> Fast Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Bread">
+                        <div class="card-body">
+                            <h5 class="card-title">Artisan Bread</h5>
+                            <p class="card-text text-muted">Freshly baked sourdough loaf</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">3000f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-clock"></i> Fast Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <span class="product-badge bg-success text-white">
+                            <i class="bi bi-organic"></i> Organic
+                        </span>
+                        <img src="image/pancake.jpeg" 
+                             class="card-img-top" alt="Chocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">pancake meat</h5>
+                            <p class="card-text text-muted">meat assortment</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary">3500f</span>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="delivery-badge">
+                                    <i class="bi bi-clock"></i> Fast Delivery
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-cart-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-light p-5 rounded-3 mb-5">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="feature-icon mx-auto">
+                        <i class="bi bi-truck text-primary fs-4"></i>
+                    </div>
+                    <h5>Free Shipping</h5>
+                    <p class="text-muted mb-0">On orders over 5000f</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="feature-icon mx-auto">
+                        <i class="bi bi-arrow-repeat text-primary fs-4"></i>
+                    </div>
+                    <h5>Easy Returns</h5>
+                    <p class="text-muted mb-0">30-day return policy</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="feature-icon mx-auto">
+                        <i class="bi bi-shield-check text-primary fs-4"></i>
+                    </div>
+                    <h5>Secure Payment</h5>
+                    <p class="text-muted mb-0">100% secure checkout</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-icon mx-auto">
+                        <i class="bi bi-headset text-primary fs-4"></i>
+                    </div>
+                    <h5>24/7 Support</h5>
+                    <p class="text-muted mb-0">Dedicated support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="mb-5">
+            <h2 class="text-center section-title mb-5">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"Great products and fast delivery. I've ordered multiple times and always been satisfied with the quality."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Verified Buyer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <p class="card-text">"Excellent customer service! They helped me resolve an issue with my order quickly and professionally."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Verified Buyer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"The quality of products exceeded my expectations. Will definitely shop here again!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                                <div>
+                                    <h6 class="mb-0">Emily Rodriguez</h6>
+                                    <small class="text-muted">Verified Buyer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4"> Order Now</h5>
+                    <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5 red "></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="about us.html">About Us</a></li>
+                        <li class="mb-2"><a href="#">Products</a></li>
+                        <li class="mb-2"><a href="cantact.html">Contact</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Electronics</a></li>
+                        <li class="mb-2"><a href="#">food</a></li>
+                        <li class="mb-2"><a href="#">fashion</a></li>
+                        <li class="mb-2"><a href="#">furniture</a></li>
+                       
+                    </ul>
+                </div>
+                              <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase mb-4">Subscribe</h5>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="mt-4">
+                        <img src="image/download.jpeg" alt="Payment Methods" class="mtn" width="100" height="80" style="border-radius: 6px ">
+                        <img src="image/Orange money.jpeg" alt="Payment Methods" class="orange" width="100" height="80"  style="border-radius: 6px ">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0"> &copy; 2025 Overlord. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="footer-links">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#" class="footer-links">Terms of Service</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Countdown timer for deals
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const diff = endOfDay - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Add to cart animation
+        const addButtons = document.querySelectorAll('.btn-outline-primary');
+        addButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = '<i class="bi bi-check"></i> Added';
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('btn-success');
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="bi bi-cart-plus"></i> Add';
+                    this.classList.remove('btn-success');
+                    this.classList.add('btn-outline-primary');
+                }, 2000);
+            });
+        });
+        
+        // Add to cart logic using localStorage
+document.querySelectorAll('.btn-outline-primary').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        const productCard = btn.closest('.card');
+        const title = productCard.querySelector('.card-title').innerText;
+        const price = productCard.querySelector('.h5').innerText;
+        const image = productCard.querySelector('img').src;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ title, price, image });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        btn.innerHTML = '<i class="bi bi-check"></i> Added';
+        btn.classList.remove('btn-outline-primary');
+        btn.classList.add('btn-success');
+
+        setTimeout(() => {
+            btn.innerHTML = '<i class="bi bi-cart-plus"></i> Add';
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-outline-primary');
+        }, 2000);
+    });
+});
+
+    </script>
+</body>
+</html>

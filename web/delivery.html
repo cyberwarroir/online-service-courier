@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Confirmation | Jin-Sung Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .delivery-box {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      margin-top: 3rem;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .delivery-number {
+      font-size: 1.2rem;
+      background-color: #e9f5ff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      border-left: 5px solid #0d6efd;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="delivery-box">
+    <h2 class="section-title">✅ Order Placed Successfully!</h2>
+    <p>Thank you for shopping with <strong>Jin-Sung Service</strong>. Your items are being processed and will be delivered to your location shortly.</p>
+
+    <h4 class="mt-4">🧾 Order Summary</h4>
+    <div id="deliverySummary" class="mb-3"></div>
+
+    <div class="delivery-number">
+      📞 <strong>Call +237 6 78 90 12 34</strong> to confirm or update your delivery location.
+    </div>
+
+    <a href="cart.html" class="btn btn-outline-primary mt-4">← Back to Cart</a>
+  </div>
+</div>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const container = document.getElementById("deliverySummary");
+
+  if (cart.length === 0) {
+    container.innerHTML = "<p>No order details found.</p>";
+  } else {
+    let total = 0;
+    cart.forEach((item, index) => {
+      container.innerHTML += `
+        <div class="mb-2">
+          <strong>${item.title}</strong> - <span class="text-muted">${item.price}</span>
+        </div>`;
+      const priceValue = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+      total += priceValue;
+    });
+    container.innerHTML += `<hr><strong>Total Paid: ${total.toFixed(2)} FCFA</strong>`;
+  }
+
+  // Optional: clear cart after payment
+  localStorage.removeItem("cart");
+</script>
+</body>
+</html>
